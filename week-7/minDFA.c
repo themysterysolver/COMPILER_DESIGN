@@ -65,7 +65,7 @@ void minimiseDFA(){
                     for(int k=0;k<noOfInput;k++){
                         int t1=transition[i][k];
                         int t2=transition[j][k];
-                        if((t1!=-1 && t2!=-1 && marked[t1][t2])||(t1==-1 && t2!=-1)||(t2==-1 && t2!=-1)){
+                        if((t1!=-1 && t2!=-1 && marked[t1][t2])||(t1==-1 && t2!=-1)||(t2==-1 && t1!=-1)){
                             marked[i][j]=marked[j][i]=true;
                             change=true;
                             break;
